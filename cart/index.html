@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Tech Shop</h1>
+        <p class="cart-badge">
+            Cart: <span id="cart-count">0</span>
+            <span class="visually-hidden">items</span>
+        </p>
+    </header>
+
+    <main class="layout">
+        <section aria-labelledby="products-heading">
+            <h2 id="products-heading">Products</h2>
+            <ul id="product-list" class="product-grid"></ul>
+        </section>
+
+        <section aria-labelledby="cart-heading" class="cart-panel">
+            <h2 id="cart-heading">Your cart</h2>
+            <p id="cart-empty">Your cart is empty.</p>
+            <ul id="cart-list" class="cart-list"></ul>
+            <p class="cart-total">Total: <strong id="cart-total">$0.00</strong></p>
+            <button type="button" id="clear-cart" class="btn btn-danger">Clear cart</button>
+        </section>
+    </main>
+
+    <p class="back-link"><a href="../">&larr; Back to To-Do List</a></p>
+
+    <script type="module" src="js/cart-app.js"></script>
+</body>
+</html>
