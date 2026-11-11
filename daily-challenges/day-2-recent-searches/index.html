@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Recent Searches</title>
+    <link rel="stylesheet" href="../challenges.css">
+</head>
+<body>
+    <main>
+        <h1>Day 2: Recent Searches</h1>
+        <p>Search for something, then click the box again to see your last 5 searches.</p>
+
+        <form id="search-form" role="search">
+            <div class="search-wrapper" id="search-wrapper">
+                <label for="search-input" class="muted">Search</label>
+                <input type="text" id="search-input" autocomplete="off" placeholder="Try &quot;javascript&quot;">
+                <div id="history-box" class="history" hidden>
+                    <p class="history-title">Recent searches</p>
+                    <ul id="history-list" style="list-style: none; margin: 0; padding: 0"></ul>
+                    <button type="button" id="clear-history" class="btn-link history-title">Clear history</button>
+                </div>
+            </div>
+            <p><button type="submit" class="btn">Search</button></p>
+        </form>
+
+        <p id="results" aria-live="polite">Nothing searched yet.</p>
+        <p><a href="../">&larr; All challenges</a></p>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
