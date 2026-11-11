@@ -1,16 +1,14 @@
 import { getState, setState, subscribe } from './cart-state.js';
 import { elements, render, renderProducts } from './cart-ui.js';
-import {
-    addToCart,
-    removeFromCart,
-    updateQuantity,
-} from './cart-logic.js';
+import { addToCart, removeFromCart, updateQuantity } from './cart-logic.js';
 
 // Add to cart (event delegation on the product list)
 elements.productList.addEventListener('click', (event) => {
     const button = event.target.closest('.add-to-cart');
     if (button) {
-        setState({ cart: addToCart(getState().cart, Number(button.dataset.id)) });
+        setState({
+            cart: addToCart(getState().cart, Number(button.dataset.id)),
+        });
     }
 });
 

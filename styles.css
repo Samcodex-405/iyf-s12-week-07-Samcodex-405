@@ -9,14 +9,16 @@
     --line: #d5e0de;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     min-height: 100vh;
     background: var(--bg);
     color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, 'Times New Roman', serif;
     display: flex;
     justify-content: center;
     padding: 48px 16px;
@@ -31,12 +33,25 @@ body {
     padding: 28px;
 }
 
-h1 { margin: 0 0 20px; font-size: 1.8rem; }
+h1 {
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+}
 
-button, input { font: inherit; }
-button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+button,
+input {
+    font: inherit;
+}
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
 
-#todo-form { display: flex; gap: 8px; }
+#todo-form {
+    display: flex;
+    gap: 8px;
+}
 
 #todo-input {
     flex: 1;
@@ -53,9 +68,15 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
     color: #fff;
     cursor: pointer;
 }
-#todo-form button:hover { background: var(--accent-dark); }
+#todo-form button:hover {
+    background: var(--accent-dark);
+}
 
-.filters { display: flex; gap: 6px; margin: 18px 0 8px; }
+.filters {
+    display: flex;
+    gap: 6px;
+    margin: 18px 0 8px;
+}
 
 .filter {
     padding: 6px 14px;
@@ -65,9 +86,17 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
     color: var(--muted);
     cursor: pointer;
 }
-.filter.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+.filter.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+}
 
-#todo-list { list-style: none; margin: 0; padding: 0; }
+#todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .todo-item {
     display: flex;
@@ -79,8 +108,14 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
     cursor: pointer;
 }
 
-.todo-text { flex: 1; word-break: break-word; }
-.todo-item.completed .todo-text { text-decoration: line-through; color: var(--muted); }
+.todo-text {
+    flex: 1;
+    word-break: break-word;
+}
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: var(--muted);
+}
 
 .delete {
     border: 0;
@@ -92,8 +127,15 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
     opacity: 0;
     transition: opacity 0.15s;
 }
-.todo-item:hover .delete, .delete:focus-visible { opacity: 1; }
-@media (hover: none) { .delete { opacity: 1; } }
+.todo-item:hover .delete,
+.delete:focus-visible {
+    opacity: 1;
+}
+@media (hover: none) {
+    .delete {
+        opacity: 1;
+    }
+}
 
 .edit-input {
     flex: 1;
@@ -102,7 +144,11 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
     border-radius: 6px;
 }
 
-.empty { color: var(--muted); padding: 16px 4px; font-style: italic; }
+.empty {
+    color: var(--muted);
+    padding: 16px 4px;
+    font-style: italic;
+}
 
 .stats {
     display: flex;
@@ -119,4 +165,6 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
     text-decoration: underline;
     cursor: pointer;
 }
-#clear-completed:hover { color: var(--danger); }
+#clear-completed:hover {
+    color: var(--danger);
+}

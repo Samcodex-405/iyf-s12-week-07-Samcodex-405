@@ -1,38 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 3: Form Auto-Save</title>
-    <link rel="stylesheet" href="../challenges.css">
-</head>
-<body>
-    <main>
-        <h1>Day 3: Form Auto-Save</h1>
-        <p>Type something, wait 5 seconds, then refresh. Your answers come back.</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Day 3: Form Auto-Save</title>
+        <link rel="stylesheet" href="../challenges.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Day 3: Form Auto-Save</h1>
+            <p>
+                Type something, wait 5 seconds, then refresh. Your answers come
+                back.
+            </p>
 
-        <form id="draft-form">
-            <div class="field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" autocomplete="off">
-            </div>
-            <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="off">
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-            <div class="field">
-                <label><input type="checkbox" name="newsletter"> Send me the newsletter</label>
-            </div>
-            <button type="submit" class="btn">Submit</button>
-        </form>
+            <form id="draft-form">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="off"
+                    />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="off"
+                    />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="field">
+                    <label
+                        ><input type="checkbox" name="newsletter" /> Send me the
+                        newsletter</label
+                    >
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
 
-        <p id="status" class="muted" aria-live="polite"></p>
-        <p><a href="../">&larr; All challenges</a></p>
-    </main>
-    <script type="module" src="autosave.js"></script>
-</body>
+            <p id="status" class="muted" aria-live="polite"></p>
+            <p><a href="../">&larr; All challenges</a></p>
+        </main>
+        <script type="module" src="autosave.js"></script>
+    </body>
 </html>

@@ -7,11 +7,11 @@
 
 ## Review questions
 
-| Question                                      | Answer (yes / no / partly) | Notes |
-| --------------------------------------------- | -------------------------- | ----- |
-| Does it handle all error cases?               |                            |       |
-| Is the code well-organised?                   |                            |       |
-| Can another developer understand it?          |                            |       |
+| Question                             | Answer (yes / no / partly) | Notes |
+| ------------------------------------ | -------------------------- | ----- |
+| Does it handle all error cases?      |                            |       |
+| Is the code well-organised?          |                            |       |
+| Can another developer understand it? |                            |       |
 
 ## Error cases to check
 
