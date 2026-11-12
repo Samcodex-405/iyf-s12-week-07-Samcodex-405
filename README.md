@@ -35,13 +35,13 @@ My Week 5 To-Do List, made professional:
 
 ### Daily Challenges
 
-| Day | Challenge |
-| --- | --------- |
-| 1 | Theme toggle that saves light/dark mode in `localStorage` |
-| 2 | Search box that saves and replays the last 5 searches |
-| 3 | Form that auto-saves every 5 seconds and recovers after a refresh |
-| 4 | Refactor of a buggy order total function (error handling, naming, extracted functions) |
-| 5 | Code review of my Week 6 Weather Dashboard with a list of improvements |
+| Day | Challenge                                                                              |
+| --- | -------------------------------------------------------------------------------------- |
+| 1   | Theme toggle that saves light/dark mode in `localStorage`                              |
+| 2   | Search box that saves and replays the last 5 searches                                  |
+| 3   | Form that auto-saves every 5 seconds and recovers after a refresh                      |
+| 4   | Refactor of a buggy order total function (error handling, naming, extracted functions) |
+| 5   | Code review of my Week 6 Weather Dashboard with a list of improvements                 |
 
 ## How to Run
 
