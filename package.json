@@ -1,0 +1,23 @@
+{
+    "name": "iyf-s12-week-07-samcodex-405",
+    "version": "1.0.0",
+    "description": "Week 7: JavaScript best practices - refactored to-do list, shopping cart and daily challenges",
+    "type": "module",
+    "scripts": {
+        "test": "vitest run",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write ."
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "eslint": "^9.0.0",
+        "globals": "^16.0.0",
+        "prettier": "^3.0.0",
+        "vitest": "^3.0.0"
+    }
+}
