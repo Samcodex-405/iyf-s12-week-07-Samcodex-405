@@ -1,0 +1,98 @@
+import { addRecentSearch, normalizeHistory } from './history.js';
+
+const STORAGE_KEY = 'day2_recent_searches';
+
+const form = document.getElementById('search-form');
+const input = document.getElementById('search-input');
+const wrapper = document.getElementById('search-wrapper');
+const historyBox = document.getElementById('history-box');
+const historyList = document.getElementById('history-list');
+const clearButton = document.getElementById('clear-history');
+const results = document.getElementById('results');
+
+function loadHistory() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return normalizeHistory(raw ? JSON.parse(raw) : []);
+    } catch {
+        return [];
+    }
+}
+
+function saveHistory(history) {
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+    } catch (error) {
+        console.warn('Could not save search history:', error);
+    }
+}
+
+let history = loadHistory();
+
+function renderHistory() {
+    const items = history.map((term) => {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'history-item';
+        button.textContent = term;
+        button.dataset.term = term;
+        li.append(button);
+        return li;
+    });
+    historyList.replaceChildren(...items);
+}
+
+function showHistory() {
+    historyBox.hidden = history.length === 0;
+}
+
+function hideHistory() {
+    historyBox.hidden = true;
+}
+
+function runSearch(term) {
+    const cleaned = term.trim();
+    if (cleaned === '') {
+        results.textContent = 'Type something to search.';
+        return;
+    }
+    history = addRecentSearch(history, cleaned);
+    saveHistory(history);
+    renderHistory();
+    input.value = cleaned;
+    results.textContent = `Showing results for “${cleaned}”`;
+    hideHistory();
+}
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    runSearch(input.value);
+});
+
+input.addEventListener('focus', showHistory);
+input.addEventListener('click', showHistory);
+
+// Click a history item to search again (event delegation)
+historyList.addEventListener('click', (event) => {
+    const button = event.target.closest('.history-item');
+    if (button) {
+        runSearch(button.dataset.term);
+    }
+});
+
+clearButton.addEventListener('click', () => {
+    history = [];
+    saveHistory(history);
+    renderHistory();
+    hideHistory();
+});
+
+// Click anywhere outside the search box to close the dropdown
+document.addEventListener('click', (event) => {
+    if (!wrapper.contains(event.target)) {
+        hideHistory();
+    }
+});
+
+renderHistory();

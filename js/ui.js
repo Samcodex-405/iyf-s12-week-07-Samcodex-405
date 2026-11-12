@@ -1,8 +1,4 @@
-import {
-    countRemaining,
-    filterTodos,
-    formatItemsLeft,
-} from './todo-logic.js';
+import { countRemaining, filterTodos, formatItemsLeft } from './todo-logic.js';
 
 export const elements = {
     form: document.getElementById('todo-form'),
