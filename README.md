@@ -101,9 +101,8 @@ The To-Do List tests (`tests/todo-logic.test.js`) cover:
 
 ## Collaboration
 
-Reviewed: <link to the PR I opened on my partner's repository>
-
-Partner's PR on my repository: <link to the refactor/modules PR into main>
+ Reviewed: <https://github.com/Samcodex-405/iyf-s12-week-07-Samcodex-405/pull/1>
+ Partner's PR on my repository: <link to the refactor/modules PR into main>
 
 ## What I Learned
 
